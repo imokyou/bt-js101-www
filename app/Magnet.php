@@ -2,8 +2,7 @@
 
 namespace App;
 
-# use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
-use Moloquent\Eloquent\Model as Eloquent;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class Magnet extends Eloquent
 {
