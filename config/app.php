@@ -177,7 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Jenssegers\Mongodb\MongodbServiceProvider::class
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
+        MongolidLaravel\MongolidServiceProvider::class
 
     ],
 
