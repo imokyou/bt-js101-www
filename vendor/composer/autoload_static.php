@@ -1901,6 +1901,7 @@ class ComposerStaticInit4a086dd7c24abc00db220b68ed7d6f83
         'Moloquent\\Query\\Processor' => __DIR__ . '/..' . '/moloquent/moloquent/src/Query/Processor.php',
         'Moloquent\\Queue\\Failed\\MongoFailedJobProvider' => __DIR__ . '/..' . '/moloquent/moloquent/src/Queue/Failed/MongoFailedJobProvider.php',
         'Moloquent\\Queue\\MongoConnector' => __DIR__ . '/..' . '/moloquent/moloquent/src/Queue/MongoConnector.php',
+        'Moloquent\\Queue\\MongoJob' => __DIR__ . '/..' . '/moloquent/moloquent/src/Queue/MongoJob.php',
         'Moloquent\\Queue\\MongoQueue' => __DIR__ . '/..' . '/moloquent/moloquent/src/Queue/MongoQueue.php',
         'Moloquent\\Relations\\BelongsTo' => __DIR__ . '/..' . '/moloquent/moloquent/src/Relations/BelongsTo.php',
         'Moloquent\\Relations\\BelongsToMany' => __DIR__ . '/..' . '/moloquent/moloquent/src/Relations/BelongsToMany.php',

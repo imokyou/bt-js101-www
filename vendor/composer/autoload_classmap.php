@@ -1591,6 +1591,7 @@ return array(
     'Moloquent\\Query\\Processor' => $vendorDir . '/moloquent/moloquent/src/Query/Processor.php',
     'Moloquent\\Queue\\Failed\\MongoFailedJobProvider' => $vendorDir . '/moloquent/moloquent/src/Queue/Failed/MongoFailedJobProvider.php',
     'Moloquent\\Queue\\MongoConnector' => $vendorDir . '/moloquent/moloquent/src/Queue/MongoConnector.php',
+    'Moloquent\\Queue\\MongoJob' => $vendorDir . '/moloquent/moloquent/src/Queue/MongoJob.php',
     'Moloquent\\Queue\\MongoQueue' => $vendorDir . '/moloquent/moloquent/src/Queue/MongoQueue.php',
     'Moloquent\\Relations\\BelongsTo' => $vendorDir . '/moloquent/moloquent/src/Relations/BelongsTo.php',
     'Moloquent\\Relations\\BelongsToMany' => $vendorDir . '/moloquent/moloquent/src/Relations/BelongsToMany.php',
