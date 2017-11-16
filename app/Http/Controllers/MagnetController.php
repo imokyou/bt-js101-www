@@ -21,12 +21,12 @@ class MagnetController extends Controller
         $name = $req->input('name', '');
         $magnet = New Magnet;
         if(!empty($name)) {
-            $collects = $magnet->where('name', 'like', "%{$name}%")->take(100)->orderBy('_id', 'desc')->get();
+            $collects = $magnet->sort(['_id'=>1])->limit(100);
         } else {
 
             $collects = Cache::get('collects', '');
             if(empty($collects)) {
-                $collects = $magnet->take(100)->orderBy('_id', 'desc')->get();
+                $collects = $magnet->sort(['_id'=>1])->limit(100);
                 Cache::set('collects', json_encode($collects), 1);
             }else {
                 $collects = json_decode($collects);
