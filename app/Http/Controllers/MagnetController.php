@@ -20,27 +20,28 @@ class MagnetController extends Controller
     {
         $name = $req->input('name', '');
         $magnet = New Magnet;
-        if(!empty($name)) {
-            $collects = $magnet::all()->sort(['_id'=>1])->limit(100);
+        if(empty($name)) {
+            $collects = $magnet::orderBy('_id', 'desc')->take(100)->get();
         } else {
-
+            $collects = $magnet::where('name', 'like', "%{$name}%")->orderBy('_id', 'desc')->take(100)->get();
+            
+            /*
             $collects = Cache::get('collects', '');
             if(empty($collects)) {
                 $collects = $magnet::all()->sort(['_id'=>1])->limit(100);
                 Cache::set('collects', json_encode($collects), 1);
             }else {
                 $collects = json_decode($collects);
-            }
-            
+            }*/
         }
 
-        $collects = collect([]);
-
+        /*
         $total = Cache::get('total', '');
         if($total === '') {
             $total = $magnet::count();
             Cache::set('total', $total, 1);
         }
+        */
         $total = $magnet::count();
         
         return view('magnet.list', compact('collects', 'name', 'total'));

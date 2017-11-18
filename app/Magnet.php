@@ -2,8 +2,8 @@
 
 namespace App;
 
-# use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
-use MongolidLaravel\MongolidModel as Eloquent;
+use Moloquent\Eloquent\Model as Eloquent;
+
 class Magnet extends Eloquent
 {
     protected $connection = 'mongodb';
