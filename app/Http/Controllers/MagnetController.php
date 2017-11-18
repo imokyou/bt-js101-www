@@ -41,6 +41,7 @@ class MagnetController extends Controller
             $total = $magnet::count();
             Cache::set('total', $total, 1);
         }
+        $total = $magnet::count();
         
         return view('magnet.list', compact('collects', 'name', 'total'));
     }
