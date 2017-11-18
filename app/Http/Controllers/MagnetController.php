@@ -34,9 +34,11 @@ class MagnetController extends Controller
             
         }
 
+        $collects = collect([]);
+
         $total = Cache::get('total', '');
         if($total === '') {
-            $total = $magnet->count();
+            $total = $magnet::count();
             Cache::set('total', $total, 1);
         }
         
