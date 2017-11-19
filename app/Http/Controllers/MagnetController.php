@@ -27,8 +27,8 @@ class MagnetController extends Controller
         }
 
 
-        $dbhost = env("DB_MONGO_HOST", "127.0.0.1");
-        $dbport = env("DB_MONGO_PORT", "27017");
+        $dbhost = env("MG_HOST", "127.0.0.1");
+        $dbport = env("MG_PORT", "27017");
         $m = new \MongoDB\Client("mongodb://{$dbhost}:{$dbport}");
         $db = $m->torrents;
         $collection = $db->magnets;
