@@ -26,7 +26,10 @@ class MagnetController extends Controller
             $collects = $magnet::where('name', 'like', "%{$name}%")->orderBy('_id', 'desc')->take(100)->get();
         }
 
-        $m = new \MongoDB\Client();
+
+        $dbhost = env("DB_MONGO_HOST", "127.0.0.1");
+        $dbport = env("DB_MONGO_PORT", "27017");
+        $m = new \MongoDB\Client("mongodb://{$dbhost}:{$dbport}");
         $db = $m->torrents;
         $collection = $db->magnets;
         $total = $collection->count();
